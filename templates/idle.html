@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+   
+   <head>
+      <title>idle</title>
+      <meta http-equiv="refresh" content="30;url={{ url_for('working') }}">
+   </head>
+   <body>
+
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+
+      <h1>Home Page</h1>
+      <p>Synchonization will start in 30 seconds.</p>
+      <p>Do you want to <a href = "{{ url_for('working') }}">
+         <b>synchronize rigth away?</b></a></p>
+      <p>Do you want to <a href = "{{ url_for('settings') }}">
+         <b>change the settings?</b></a></p>
+      
+   </body>
+</html>

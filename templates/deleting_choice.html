@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+   
+   <head>
+      <title>deleting choice</title>
+      <meta http-equiv="refresh" content="20;url={{ url_for('idle') }}">
+   </head>
+   <body>
+
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+
+      <h1>Deleting Process (this process doesn't raise any error but it doesn't seem to be effective)</h1>
+      <p>Would you like to delete the file in your mongo database if they are no longer in your google drive?</p>
+      <p><a href = "{{ url_for('deleting') }}">
+         <b>yes</b></a></p>
+      <p><a href = "{{ url_for('idle') }}">
+         <b>no</b></a></p>
+      <p>you will be redirected to the home page after 20 seconds</p>
+      
+   </body>
+</html>

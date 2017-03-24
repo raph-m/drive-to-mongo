@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+   
+   <head>
+      <title>working</title>
+   </head>
+
+   <body>
+   
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+		
+      <h1>Synchronizing page</h1>
+      
+   </body>
+</html>

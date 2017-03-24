@@ -1,0 +1,44 @@
+
+
+<!doctype html>
+<html>
+
+   <head>
+      <title>settings</title>
+   </head>
+
+   <body>
+
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+   
+      <h1>Settings Page</h1>
+      
+      {% if error %}
+      <p><strong>Error:</strong> {{ error }}
+      {% endif %}
+      
+      <form action = "" method = post>
+         <dl>
+            <dt>Maximum size for downloading files (Mo):</dt>
+            
+            <dd>
+               <input type = int name = max_size 
+                  value = "{{request.form.username }}">
+            </dd>
+            
+            <dt>Future option to set which type of files should be fetched:</dt>
+            <dd><input type = password name = not_effective_yet></dd>
+         </dl>
+         <p><input type = submit value = enter></p>
+      </form>
+      
+   </body>
+</html>
