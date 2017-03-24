@@ -109,10 +109,10 @@ def working():
 
     while True:
 
-        response = drive_service.files().list(q="mimeType contains 'pdf' or mimeType contains 'mp3' or mimeType co"
-                                                "ntains 'docx' or mimeType contains 'docx' or mimeType contains "
-                                                "'jpg' or mimeType contains 'ppt' or mimeType contains 'jpeg' "
-                                                "or mimeType contains 'pptx' or mimeType contains 'png'",
+        response = drive_service.files().list(q="mimeType contains 'pdf' or mimeType contains 'application/msword' or mimeType co"
+                                                "ntains 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' or mimeType contains "
+                                                "'pjpeg' or mimeType contains 'application/vnd.ms-powerpoint' or mimeType contains 'jpeg' "
+                                                "or mimeType contains 'application/vnd.openxmlformats-officedocument.presentationml.presentation' or mimeType contains 'png'",
                                               spaces='drive',
                                               fields='nextPageToken, files(id, name, modifiedTime)',
                                               pageToken=page_token).execute()
