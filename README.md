@@ -22,7 +22,8 @@ The file client_secrets in the main directory is the credentials to access this 
 
 You can synchronize it with your google drive by doing as follows:
 
-    1)Use this wizard to create or select a project in the Google Developers Console and automatically turn on the API. Click Continue, then Go to credentials.
+    1)Use this wizard (https://console.developers.google.com/flows/enableapi?apiid=drive)
+    to create or select a project in the Google Developers Console and automatically turn on the API. Click Continue, then Go to credentials.
     2)On the Add credentials to your project page, click the Cancel button.
     3)At the top of the page, select the OAuth consent screen tab. Select an Email address, enter a Product name if not already set, and click the Save button.
     4)Select the Credentials tab, click the Create credentials button and select OAuth client ID.
